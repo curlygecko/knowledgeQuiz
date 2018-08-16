@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/soru"
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/secenekler"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Display2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <RadioGroup
+        android:id="@+id/secenekler"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727">
+
+        <RadioButton
+            android:id="@+id/secenek1"
+            android:layout_width="350dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="@string/secenek1"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/secenek2"
+            android:layout_width="350dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="@string/secenek2"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/secenek3"
+            android:layout_width="350dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="@string/secenek3"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/secenek4"
+            android:layout_width="350dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="@string/secenek4"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dogru"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dogru"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+</android.support.constraint.ConstraintLayout>

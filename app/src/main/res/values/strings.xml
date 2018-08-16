@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">knowledgeQuiz</string>
+    <string name="soru"></string>
+    <string name="secenekler"></string>
+    <string name="secenek1"></string>
+    <string name="secenek2"></string>
+    <string name="secenek3"></string>
+    <string name="secenek4"></string>
+    <string name="sonraki">Sonraki</string>
+    <string name="yanlis"></string>
+    <string name="dogru"></string>
+</resources>
