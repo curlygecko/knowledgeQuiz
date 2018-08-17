@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">knowledgeQuiz</string>
+    <string name="app_name">Gereksiz Sorular</string>
     <string name="soru"></string>
     <string name="secenekler"></string>
     <string name="secenek1"></string>
@@ -10,4 +10,11 @@
     <string name="yanlis"></string>
     <string name="dogru">SKOR: </string>
     <string name="hak">HAK: </string>
+    <string name="gameover"></string>
+    <string name="tekraOyna">Tekrar Oyna</string>
+    <string name="oyundanCik">ÇIKIŞ</string>
+    <string name="oyunabasla">OYUNA BAŞLA</string>
+    <string name="cik">ÇIK</string>
+    <string name="appnamee">Gereksiz Sorular</string>
+
 </resources>

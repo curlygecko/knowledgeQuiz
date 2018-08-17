@@ -1,20 +1,11 @@
 package com.example.dogu2.knowledgequiz;
 
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Random;
-import java.util.Set;
 
 public class questions {
 
     HashMap<Integer, String> sorular, cevaplar, others1, others2, others3;
-    String soruu;
-    String cevap,other1,other2, other3;
+    String cevap,other1,other2, other3, soruu;
 
     public questions() {
         sorular = new HashMap<>();
