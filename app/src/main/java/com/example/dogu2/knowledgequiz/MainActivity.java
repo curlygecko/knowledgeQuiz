@@ -3,7 +3,10 @@ package com.example.dogu2.knowledgequiz;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -19,6 +22,9 @@ public class MainActivity extends Activity {
     ArrayList<String> secenekler;
     int p1, p2 , p3, p4,skor,kalanHak, number;
     String skorr, kalanHakk;
+    ImageView can11,can22,can33;
+    boolean visible=true;
+    MediaPlayer correct_answer, wrong_answer;
 
     @Override
     public void recreate() {
@@ -31,7 +37,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         final questions quiz = new questions();
-        Intent intent = new Intent(this, MainActivity.class);
         number=1;
         p1=0;
         p2=1;
@@ -40,13 +45,18 @@ public class MainActivity extends Activity {
         skor=0;
         skorr="";
         kalanHak=3;
-        kalanHakk="";
+
+        correct_answer = MediaPlayer.create(this, R.raw.correct);
+        wrong_answer = MediaPlayer.create(this, R.raw.wrong);
+
+        can11 = findViewById(R.id.can1);
+        can22 = findViewById(R.id.can2);
+        can33 = findViewById(R.id.can3);
+
 
         secenekler = new ArrayList<String>();
         sorulanSoru = findViewById(R.id.soru);
         dogruCevap = findViewById(R.id.dogru);
-        hakk = findViewById(R.id.hak);
-        hakk.setText("HAK: "+Integer.toString(kalanHak));
         soruGrubu = findViewById(R.id.secenekler);
         cevap1 = findViewById(R.id.secenek1);
         cevap2 = findViewById(R.id.secenek2);
@@ -65,6 +75,9 @@ public class MainActivity extends Activity {
         cevap2.setText(secenekler.get(p2));
         cevap3.setText(secenekler.get(p3));
         cevap4.setText(secenekler.get(p4));
+        can11.setVisibility(View.VISIBLE);
+        can22.setVisibility(View.VISIBLE);
+        can33.setVisibility(View.VISIBLE);
 
 
         soruGrubu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -72,7 +85,7 @@ public class MainActivity extends Activity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton secilen = (RadioButton) soruGrubu.findViewById(soruGrubu.getCheckedRadioButtonId());
                 if(secilen.getText().equals(quiz.getCevap(number))) {
-                    hakk.setText("HAK: "+kalanHakk);
+                    correct_answer.start();
                     skor++;
                     skorr = Integer.toString(skor);
                     p1=0;
@@ -97,13 +110,22 @@ public class MainActivity extends Activity {
                     cevap2.setText(secenekler.get(p2));
                     cevap3.setText(secenekler.get(p3));
                     cevap4.setText(secenekler.get(p4));
-                    dogruCevap.setText("SKOR: "+skorr);
+                    dogruCevap.setText("SKOR "+skorr);
                 }else if(!secilen.getText().equals(quiz.getCevap(number))) {
+                    wrong_answer.start();
                     kalanHak--;
                     kalanHakk = Integer.toString(kalanHak);
-                    hakk.setText("HAK: " + kalanHakk);
+                    if(kalanHak <= 2){
+                        can33.setVisibility(View.INVISIBLE);
+                    }if(kalanHak <= 1){
+                        can22.setVisibility(View.INVISIBLE);
+                    }if(kalanHak == 0){
+                        can11.setVisibility(View.INVISIBLE);
+                    }
+
                 }
                 if(kalanHak <= 0){
+                    
                     Intent intent = new Intent(MainActivity.this, gameOver.class);
                     intent.putExtra("deneme", Integer.toString(skor).toString());
                     startActivity(intent);

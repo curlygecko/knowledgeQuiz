@@ -18,40 +18,40 @@ public class questions {
         sorular.put(7,"Hangisi tarihteki Türk devletlerinden biri değildir?");
 
         cevaplar = new HashMap<>();
-        cevaplar.put(1,"2.Murat");
-        cevaplar.put(2,"İngiltere");
+        cevaplar.put(1,"2.MURAT");
+        cevaplar.put(2,"İNGİLTERE");
         cevaplar.put(3,"0");
-        cevaplar.put(4,"Singapur");
-        cevaplar.put(5,"Penguen");
-        cevaplar.put(6,"Su");
-        cevaplar.put(7,"Emevi Devleti");
+        cevaplar.put(4,"SİNGAPUR");
+        cevaplar.put(5,"PENGUEN");
+        cevaplar.put(6,"SU");
+        cevaplar.put(7,"EMEVİ DEVLETİ");
 
         others1 = new HashMap<>();
-        others1.put(1,"8.Osman");
-        others1.put(2,"Almanya");
+        others1.put(1,"8.OSMAN");
+        others1.put(2,"ALMANYA");
         others1.put(3,"-7");
-        others1.put(4,"Tayland");
-        others1.put(5,"Ayı");
-        others1.put(6,"Karbon");
-        others1.put(7,"Moğol İmparatorluğu");
+        others1.put(4,"TÜRKİYE");
+        others1.put(5,"AYI");
+        others1.put(6,"KARBON");
+        others1.put(7,"MOĞOL İMPARATORLUĞU");
 
         others2 = new HashMap<>();
-        others2.put(1,"Kanuni Süleyman");
-        others2.put(2,"Kanada");
+        others2.put(1,"KİM-JONG-UN");
+        others2.put(2,"KANADA");
         others2.put(3,"3,14");
-        others2.put(4,"Kongo");
-        others2.put(5,"Muhabbet Kuşu");
-        others2.put(6,"Azot");
-        others2.put(7,"Roma İmparatorluğu");
+        others2.put(4,"KONGO");
+        others2.put(5,"KÖPEK");
+        others2.put(6,"AZOT");
+        others2.put(7,"ROMA İMPARATORLUĞU");
 
         others3 = new HashMap<>();
-        others3.put(1,"5.Süleyman");
-        others3.put(2,"İtalya");
+        others3.put(1,"5.SÜLEYMAN");
+        others3.put(2,"İTALYA");
         others3.put(3,"0,1");
-        others3.put(4,"Rusya");
-        others3.put(5,"Yunus");
-        others3.put(6,"Krypton");
-        others3.put(7,"Çin İmparatorluğu");
+        others3.put(4,"RUSYA");
+        others3.put(5,"YUNUS");
+        others3.put(6,"KRYPTON");
+        others3.put(7,"ÇİN İMPARATORLUĞU");
     }
 
     public String getSoru(int sira){

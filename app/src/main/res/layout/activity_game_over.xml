@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".gameOver">
 
     <TextView
@@ -17,7 +18,7 @@
         android:fontFamily="@font/press_start_2p"
         android:text="@string/gameover"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="@android:color/white"
         android:textSize="36sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,7 +8,7 @@
     <string name="secenek4"></string>
     <string name="sonraki">Sonraki</string>
     <string name="yanlis"></string>
-    <string name="dogru">SKOR: </string>
+    <string name="dogru">SKOR </string>
     <string name="hak">HAK: </string>
     <string name="gameover"></string>
     <string name="tekraOyna">Tekrar Oyna</string>
